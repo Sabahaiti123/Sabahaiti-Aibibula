@@ -1,19 +1,19 @@
 
 /**
- * Write a description of class studentsmarks here.
+ * Write a description of class Algorithm2 here.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
-public class studentsmarks
+public class Algorithm2
 {
     // instance variables - replace the example below with your own
     private int x;
 
     /**
-     * Constructor for objects of class studentsmarks
+     * Constructor for objects of class Algorithm2
      */
-    public studentsmarks()
+    public Algorithm2()
     {
         // initialise instance variables
         x = 0;
