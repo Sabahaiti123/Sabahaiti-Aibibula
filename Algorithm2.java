@@ -37,6 +37,7 @@ public class Algorithm2{
             
         }
         
+        // Calculate the mean
         double mean = 0;
         
         mean = total / numberOfStudents;
@@ -44,17 +45,23 @@ public class Algorithm2{
         System.out.print("Mean: ");
         System.out.println(mean);
         
+        // Calculate the standard deviation
         double sumdiff = 0;
+        double variance = 0;
         
         for(int i=0; i<numberOfStudents; i++){
             
             sumdiff = sumdiff + (marks[i] - mean) * (marks[i] - mean);
             
-            sumdiff = sumdiff / numberOfStudents;
+            variance = sumdiff / numberOfStudents;
             
         }
         
-        System.out.println(Math.abs(-1));
+        double standardDeviation = Math.sqrt(variance);
+        
+        System.out.print("Standard Deviation: ");
+        System.out.println(standardDeviation);
+        
         
 }
 }
