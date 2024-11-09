@@ -21,6 +21,7 @@ public class Algorithm1
         
         System.out.println("Give marks for 30 students");
         
+        // Input marks with validation
         for(int i=0; i<numberOfStudents; i++){
             double temp = scanner.nextDouble();
             
@@ -30,6 +31,7 @@ public class Algorithm1
                 
             }
             
+            // Update highest and lowest marks
             marks[i] = temp;
             if(lowestmarks > temp){
                 
@@ -43,6 +45,7 @@ public class Algorithm1
             }
     }
     
+    // Printing the results
     System.out.println("lowestmarks");
     System.out.println(lowestmarks);
     System.out.println("highestmarks");

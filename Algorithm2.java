@@ -1,33 +1,60 @@
-
+import java.util.Scanner;
+// Calculate mean and standard deviation
 /**
  * Write a description of class Algorithm2 here.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Algorithm2
-{
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Algorithm2
-     */
-    public Algorithm2()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+public class Algorithm2{
+    public static void main(String[] args){
+        
+        int numberOfStudents = 30;
+        
+        double[] marks = new double[numberOfStudents];
+        
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Give marks for 30 students");
+        for(int i=0; i<numberOfStudents; i++){
+            double temp = scanner.nextDouble();
+            if(temp < 0 || temp>30){
+                
+                System.out.println("Invalid marks, please enter again");
+                continue;
+                
+            }
+            
+            marks[i] = temp;
+        
+        }
+        
+        double total = 0;
+        
+        for(int i=0; i<numberOfStudents; i++){
+            
+            total = total + marks[i];
+            
+        }
+        
+        double mean = 0;
+        
+        mean = total / numberOfStudents;
+        
+        System.out.print("Mean: ");
+        System.out.println(mean);
+        
+        double sumdiff = 0;
+        
+        for(int i=0; i<numberOfStudents; i++){
+            
+            sumdiff = sumdiff + (marks[i] - mean) * (marks[i] - mean);
+            
+            sumdiff = sumdiff / numberOfStudents;
+            
+        }
+        
+        System.out.println(Math.abs(-1));
+        
+}
 }
