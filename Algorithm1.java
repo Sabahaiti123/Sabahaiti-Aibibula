@@ -24,10 +24,9 @@ public class Algorithm1
         for(int i=0; i<numberOfStudents; i++){
             double temp = scanner.nextDouble();
             
-            while(temp < 0 || temp > 30){
+            if(temp < 0 || temp > 30){
                 
-                System.out.println("Invalid marks, Please enter a value between 0 and 30.");
-                continue;
+                System.out.println("Invalid marks, Please enter again");
                 
             }
             
