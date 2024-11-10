@@ -19,10 +19,14 @@ public class Algorithm1
         double lowestmarks = marks[0];
         double highestmarks = marks[0];
         
+        System.out.print("Enter the assignment name: ");
+        String assignmentName = scanner.nextLine();
+        
         System.out.println("Give marks for 30 students");
         
         // Input marks with validation
         for(int i=0; i<numberOfStudents; i++){
+            
             double temp = scanner.nextDouble();
             
             if(temp < 0 || temp > 30){
@@ -46,9 +50,11 @@ public class Algorithm1
     }
     
     // Printing the results
-    System.out.println("lowestmarks");
+    System.out.print("Assignment: ");
+    System.out.println(assignmentName);
+    System.out.print("lowestmarks: ");
     System.out.println(lowestmarks);
-    System.out.println("highestmarks");
+    System.out.print("highestmarks: ");
     System.out.println(highestmarks);
     
 }

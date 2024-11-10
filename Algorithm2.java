@@ -15,9 +15,15 @@ public class Algorithm2{
         
         Scanner scanner = new Scanner(System.in);
         
+        System.out.print("Enter the assignment name: ");
+        String assignmentName = scanner.nextLine();
+        
         System.out.println("Give marks for 30 students");
+        
         for(int i=0; i<numberOfStudents; i++){
+            
             double temp = scanner.nextDouble();
+            
             if(temp < 0 || temp>30){
                 
                 System.out.println("Invalid marks, please enter again");
@@ -36,6 +42,10 @@ public class Algorithm2{
             total = total + marks[i];
             
         }
+        
+        System.out.print("Assignment: ");
+        System.out.println(assignmentName);
+        
         
         // Calculate the mean
         double mean = 0;
